@@ -79,13 +79,14 @@ try:
                         i = ca.read()
                         i = int(i)
                     write_message(sender, 'Запрос в обработке: \nОжидайте ответ в течении: \n24-х часов. \nПримерное время 2 - часа.')
+                    write_message(admin, str(reseived_message))
                     a = open(str(sender) + "c.txt", "w")
                     a.write('5')
                     a.close()
                     with open(str(sender) + "c.txt", "r") as ca:
                         i = ca.read()
                         i = int(i)
-                    write_message(admin, str(reseived_message))
+                 
                 else:
                     write_message(sender, '4 цифры !!!')
 
